@@ -12,6 +12,7 @@ This document covers the Cisco Jabber-specific implementation details only.
 -Install Botkit
 
 -Ask admin to create a Jabber user for the bot in either Cisco IM&Presence Server (on-premise deployment) or Cisco Webex Messenger (cloud deployment), then get the jid and password from the admin.
+
 Jabber bots can send and receive messages, and in many cases, appear alongside their human counterparts as normal Jabber users.
 
 ## **Working with Cisco Jabber**
