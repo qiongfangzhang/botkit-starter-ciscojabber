@@ -21,27 +21,44 @@ Jabber bot uses node-xmpp to connect to Cisco Unified IM & Presence server or Ci
 The full code for a simple Cisco Jabber bot is as below:
 
 const Botkit = require('./lib/Xmppbot.js');
+
 var controller = Botkit({
+
     json_file_store: './bot_store/'
+    
 });
 
 var bot = controller.spawn({
+
     client: {
+    
         jid: ‘john@alpha-cup.cisco.com',
+        
         password: *,
+        
         host: "shn-alpha-cup011.cisco.com",
+        
         port: 5222
+        
     }
+    
 });
 
+
 controller.hears(\['hello'\], \['direct_mention', 'direct_message'\], function (bot, message) {
+
     bot.reply(message, 'Hi');
+    
 });
 
 controller.on('direct_mention', function (bot, message) {
+
     bot.reply(message, 'You mentioned me in a group and said, "' + message.text + '"');
+    
 });
 
 controller.on('direct_message', function (bot, message) {
+
     bot.reply(message, 'I got your direct message. You said, "' + message.text + '"');
+    
 });
