@@ -24,14 +24,12 @@ const Botkit = require('./lib/Xmppbot.js');
 
 var controller = Botkit({
 
-    json_file_store: './bot_store/'
-    
+    json_file_store: './bot_store/'   
 });
 
 var bot = controller.spawn({
-
-    client: {
     
+    client: {  
         jid: ‘john@alpha-cup.cisco.com',
         
         password: *,
@@ -40,8 +38,7 @@ var bot = controller.spawn({
         
         port: 5222
         
-    }
-    
+    }  
 });
 
 
@@ -54,11 +51,9 @@ controller.hears(\['hello'\], \['direct_mention', 'direct_message'\], function (
 controller.on('direct_mention', function (bot, message) {
 
     bot.reply(message, 'You mentioned me in a group and said, "' + message.text + '"');
-    
 });
 
 controller.on('direct_message', function (bot, message) {
 
-    bot.reply(message, 'I got your direct message. You said, "' + message.text + '"');
-    
+    bot.reply(message, 'I got your direct message. You said, "' + message.text + '"');  
 });
